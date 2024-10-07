@@ -6,53 +6,27 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Header */
 header {
     background-color: #f8f0ff;
     padding: 10px;
     text-align: center;
 }
-/*aca enpieza los links*/
+
 .top-bar {
     background-color: #f29dff;
     color: white;
     padding: 5px 0;
 }
 
-/*.logo-search {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.logo {
-    width: 180px;
-    border-radius: 20rem;
-}
-
-input[type="text"] {
-    width: 70%;
-    padding: 8px;
-}
-
-button {
-    background-color: #ff85e9;
-    border: none;
-    padding: 10px;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff62d0;
-}*/
-
+/* Navigation */
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
     justify-content: center;
     background-color: #ffcee1;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -68,13 +42,14 @@ nav ul li a {
 nav ul li a:hover {
     color: #d63470;
 }
-/*aca empieza la section de compras */
+
+/* Promo Section */
 .promo {
     text-align: center;
     background-color: #fff2f7;
-    padding: 50px 0;
+    padding: 50px 20px;
 }
-/*aca empieza la section de los productos*/
+
 .promo h1 {
     font-size: 3em;
     color: #ff5ea2;
@@ -85,28 +60,22 @@ nav ul li a:hover {
     padding: 15px 30px;
 }
 
+/* Product List */
 #product-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
 }
-.button_product{
-    background-color: #d63470;
-    border-radius: 8px;
-    height: 23px;
-    width: 23;
-}
-.button_product:hover{
-    color: #f29dff;
-}
+
 .product {
     background-color: white;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    width: calc(25% - 40px); /* 4 productos por fila con margen */
+    margin: 10px; /* Margen entre productos */
 }
 
 .product img {
@@ -118,9 +87,45 @@ nav ul li a:hover {
     color: #ff5ea2;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #f8f0ff;
     color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product {
+        width: calc(33.33% - 40px); /* 3 productos por fila */
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 40px); /* 2 productos por fila */
+    }
+
+    .promo h1 {
+        font-size: 2em; /* Tamaño de fuente más pequeño */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Margen vertical */
+    }
+}
+
+@media (max-width: 480px) {
+    .promo h1 {
+        font-size: 1.5em; /* Tamaño de fuente más pequeño */
+    }
+
+    .promo button {
+        padding: 10px 20px; /* Ajustar el tamaño del botón */
+    }
 }
