@@ -17,6 +17,7 @@ header {
     background-color: #f29dff;
     color: white;
     padding: 5px 0;
+    border-radius: 9px;
 }
 
 /* Navigation */
@@ -27,6 +28,7 @@ nav ul {
     justify-content: center;
     background-color: #ffcee1;
     flex-wrap: wrap;
+    border-radius: 9px;
 }
 
 nav ul li {
@@ -50,6 +52,8 @@ nav ul li a:hover {
     padding: 50px 20px;
 }
 
+
+
 .promo h1 {
     font-size: 3em;
     color: #ff5ea2;
@@ -58,12 +62,43 @@ nav ul li a:hover {
 .promo button {
     margin-top: 20px;
     padding: 15px 30px;
+    background-color: #25D366; /* Color de WhatsApp */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }
+button:hover {
+    background-color: #128C7E; /* Color más oscuro al pasar el mouse */
+}
+.product button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #25D366; /* Color de WhatsApp */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #128C7E; /* Color más oscuro al pasar el mouse */
+}
+
 
 /* Product List */
 #product-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permitir que los productos se envuelvan */
     justify-content: space-around;
     padding: 20px;
 }
@@ -104,7 +139,7 @@ footer {
 
 @media (max-width: 768px) {
     .product {
-        width: calc(50% - 40px); /* 2 productos por fila */
+        width: calc(43% - 40px); /* 2 productos por fila */
     }
 
     .promo h1 {
@@ -120,12 +155,26 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
     .promo h1 {
         font-size: 1.5em; /* Tamaño de fuente más pequeño */
     }
 
     .promo button {
         padding: 10px 20px; /* Ajustar el tamaño del botón */
+        width: 80%;
     }
+    .product button {
+        padding: 10px 20px; /* Ajustar el tamaño del botón */
+        width: 95%;
+        height: 15%;
+        font-size: small;
+    }
+
+    .product {
+        width: calc(50% - 50px); /* 1 producto por fila */
+        
+        margin: 10px 0; /* Margen vertical entre productos */
+    }
+ 
 }
